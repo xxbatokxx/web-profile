@@ -27,81 +27,57 @@ const submit = () => {
     <Head title="Posts" />
     <AuthenticatedLayout>
         <template #header>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">Edit Posts</h2>
+            <h2 class="text-xl font-semibold leading-tight text-gray-800">Edit Posts</h2>
         </template>
         <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-2 lg:px-2 space-y-6">
-                <div class="p-4 sm:p-8 bg-white shadow sm:rounded-lg">
+            <div class="mx-auto space-y-6 max-w-7xl sm:px-2 lg:px-2">
+                <div class="p-4 bg-white shadow sm:p-8 sm:rounded-lg">
                     <form name="createForm" @submit.prevent="submit" class="mt-6 space-y-6">
-                <div>
-                    <InputLabel for="judul" value="Judul" />
-                    <TextInput
-                        id="judul"
-                        type="text"
-                        class="mt-1 block w-full"
-                        v-model="form.judul"
-                        required
-                        autofocus
-                        autocomplete="off"
-                    />
+                        <div>
+                            <InputLabel for="judul" value="Judul" />
+                            <TextInput id="judul" type="text" class="block w-full mt-1" v-model="form.judul" required
+                                autofocus autocomplete="off" />
 
-                    <InputError class="mt-2" :message="form.errors.judul" />
-                </div>
+                            <InputError class="mt-2" :message="form.errors.judul" />
+                        </div>
 
-                <div>
-                    <InputLabel for="kategori" value="kategori" />
+                        <div>
+                            <InputLabel for="kategori" value="kategori" />
 
-                    <TextInput
-                        id="kategori"
-                        type="text"
-                        class="mt-1 block w-full"
-                        v-model="form.kategori"
-                        required
-                        autocomplete="off"
-                    />
+                            <TextInput id="kategori" type="text" class="block w-full mt-1" v-model="form.kategori" required
+                                autocomplete="off" />
 
-                    <InputError class="mt-2" :message="form.errors.kategori" />
-                </div>
+                            <InputError class="mt-2" :message="form.errors.kategori" />
+                        </div>
 
-                <div>
-                    <InputLabel for="konten" value="konten" />
+                        <div>
+                            <InputLabel for="konten" value="konten" />
 
-                    <TextInput
-                        id="konten"
-                        type="text"
-                        class="mt-1 block w-full"
-                        v-model="form.konten"
-                        required
-                        autocomplete="off"
-                    />
+                            <TextInput id="konten" type="text" class="block w-full mt-1" v-model="form.konten" required
+                                autocomplete="off" />
 
-                    <InputError class="mt-2" :message="form.errors.konten" />
-                </div>
+                            <InputError class="mt-2" :message="form.errors.konten" />
+                        </div>
 
-                <div>
-                    <InputLabel for="penulis" value="penulis" />
+                        <div>
+                            <InputLabel for="penulis" value="penulis" />
 
-                    <TextInput
-                        id="konten"
-                        type="text"
-                        class="mt-1 block w-full"
-                        v-model="form.penulis"
-                        required
-                        autocomplete="off"
-                    />
+                            <TextInput id="konten" type="text" class="block w-full mt-1" v-model="form.penulis" required
+                                autocomplete="off" />
 
-                    <InputError class="mt-2" :message="form.errors.penulis" />
-                </div>
+                            <InputError class="mt-2" :message="form.errors.penulis" />
+                        </div>
 
 
-                <div class="flex items-center gap-4">
-                    <PrimaryButton :disabled="form.processing">Save</PrimaryButton>
+                        <div class="flex items-center gap-4">
+                            <PrimaryButton :disabled="form.processing">Save</PrimaryButton>
 
-                    <Transition enter-from-class="opacity-0" leave-to-class="opacity-0" class="transition ease-in-out">
-                        <p v-if="form.recentlySuccessful" class="text-sm text-gray-600">Edit</p>
-                    </Transition>
-                </div>
-            </form>
+                            <Transition enter-from-class="opacity-0" leave-to-class="opacity-0"
+                                class="transition ease-in-out">
+                                <p v-if="form.recentlySuccessful" class="text-sm text-gray-600">Edit</p>
+                            </Transition>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

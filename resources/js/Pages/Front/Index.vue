@@ -53,23 +53,23 @@ const props = defineProps({
 <template>
     <Head title="Welcome" />
     <nav class="bg-white">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
             <a href="/" class="flex items-center">
-                <img src="img/logo_Web.png" class="h-8 mr-3" alt=" Logo" />
+                <img src="img/logo.png" class="object-cover w-full h-20 mr-3" alt=" Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-dark">Dosen AI</span>
             </a>
             <div class="flex md:order-2">
                 <div v-if="canLogin">
                     <button v-if="$page.props.auth.user" :href="route('dashboard')"
-                        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Dashboard</button>
+                        class="px-4 py-2 mr-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Dashboard</button>
                     <template v-else>
                         <Link :href="route('login')" type="button"
-                            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            class="px-4 py-2 mr-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         Log in</Link>
                     </template>
                 </div>
                 <button data-collapse-toggle="navbar-cta" type="button"
-                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     aria-controls="navbar-cta" aria-expanded="false">
                     <span class="sr-only">Open main menu</span>
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -81,10 +81,10 @@ const props = defineProps({
             </div>
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
                 <ul
-                    class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 dark:border-gray-700">
+                    class="flex flex-col p-4 mt-4 font-medium border border-gray-100 rounded-lg md:p-0 bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 dark:border-gray-700">
                     <li>
                         <a href="#"
-                            class="block py-2 pl-3 pr-4 text-dark bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-dark md:dark:text-blue-500"
+                            class="block py-2 pl-3 pr-4 bg-blue-700 rounded text-dark md:bg-transparent md:text-blue-700 md:p-0 dark:text-dark md:dark:text-blue-500"
                             aria-current="page">Home</a>
                     </li>
                     <li>
@@ -108,16 +108,16 @@ const props = defineProps({
         </div>
     </nav>
     <section class="bg-white dark:bg-gray-900">
-        <div class="py-1 px-4 mx-auto max-w-screen-xl  lg:py-16 grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <div class="grid max-w-screen-xl gap-12 px-4 py-1 mx-auto lg:py-16 lg:grid-cols-2 lg:gap-16">
             <div class="flex flex-col justify-center">
                 <h1
-                    class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+                    class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
                     {{ slider.judul }}</h1>
                 <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400">
                     {{ slider.konten }}</p>
                 <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
                     <a href="#"
-                        class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                        class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
                         Get started <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
                             fill="none" viewBox="0 0 14 10">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -125,7 +125,7 @@ const props = defineProps({
                         </svg>
                     </a>
                     <a href="#"
-                        class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
+                        class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800">
                         Learn more </a>
                 </div>
             </div>
@@ -136,44 +136,44 @@ const props = defineProps({
         </div>
     </section>
     <section cclass="bg-grey-50" id="about">
-        <div class="mx-auto max-w-screen-xl container flex flex-col items-center py-16 md:py-20 lg:flex-row">
+        <div class="container flex flex-col items-center max-w-screen-xl py-16 mx-auto md:py-20 lg:flex-row">
             <div class="w-full text-center sm:w-3/4 lg:w-3/5 lg:text-left">
-                <h2 class="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"> Who am I?
+                <h2 class="text-4xl font-semibold uppercase font-header text-primary sm:text-5xl lg:text-6xl"> Who am I?
                 </h2>
-                <h4 class="pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"> {{ about.judul }}</h4>
-                <p class="pt-6 font-body leading-relaxed text-grey-20">{{ about.konten }}</p>
+                <h4 class="pt-6 text-xl font-medium text-black font-header sm:text-2xl lg:text-3xl"> {{ about.judul }}</h4>
+                <p class="pt-6 leading-relaxed font-body text-grey-20">{{ about.konten }}</p>
                 <div class="flex flex-col justify-center pt-6 sm:flex-row lg:justify-start">
                     <div class="flex items-center justify-center sm:justify-start">
                         <a href="https://www.instagram.com/mujiyantosvc/"
-                            class="font-body text-lg font-semibold uppercase text-grey-20"> Connect with me </a>
+                            class="text-lg font-semibold uppercase font-body text-grey-20"> Connect with me </a>
                         <div class="hidden sm:block">
-                            <i class="bx bx-chevron-right text-2xl text-primary"></i>
+                            <i class="text-2xl bx bx-chevron-right text-primary"></i>
                         </div>
                     </div>
                     <div class="flex items-center justify-center pt-5 pl-2 sm:justify-start sm:pt-0">
                         <a href="/">
-                            <i class="bx bxl-facebook-square text-2xl text-primary hover:text-yellow"></i>
+                            <i class="text-2xl bx bxl-facebook-square text-primary hover:text-yellow"></i>
                         </a>
                         <a href="/" class="pl-4">
-                            <i class="bx bxl-twitter text-2xl text-primary hover:text-yellow"></i>
+                            <i class="text-2xl bx bxl-twitter text-primary hover:text-yellow"></i>
                         </a>
                         <a href="/" class="pl-4">
-                            <i class="bx bxl-dribbble text-2xl text-primary hover:text-yellow"></i>
+                            <i class="text-2xl bx bxl-dribbble text-primary hover:text-yellow"></i>
                         </a>
                         <a href="/" class="pl-4">
-                            <i class="bx bxl-linkedin text-2xl text-primary hover:text-yellow"></i>
+                            <i class="text-2xl bx bxl-linkedin text-primary hover:text-yellow"></i>
                         </a>
                         <a href="/" class="pl-4">
-                            <i class="bx bxl-instagram text-2xl text-primary hover:text-yellow"></i>
+                            <i class="text-2xl bx bxl-instagram text-primary hover:text-yellow"></i>
                         </a>
                     </div>
-                </div>  
+                </div>
             </div>
-            <div class="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0">
+            <div class="w-full pt-10 pl-0 sm:w-3/4 lg:w-2/5 lg:pl-12 lg:pt-0">
                 <div v-for="item in skill" :key="item.id">
                     <div class="flex items-end justify-between">
-                        <h4 class="font-body font-semibold uppercase text-black"> {{item.judul}} </h4>
-                        <h3 class="font-body text-3xl font-bold text-primary">{{ item.konten }}%</h3>
+                        <h4 class="font-semibold text-black uppercase font-body"> {{ item.judul }} </h4>
+                        <h3 class="text-3xl font-bold font-body text-primary">{{ item.konten }}%</h3>
                     </div>
                     <div class="mt-2 bg-lila w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
                         <div class="bg-blue-600 h-2.5 rounded-full" style="width: {{item.konten}}%"></div>
@@ -190,8 +190,8 @@ const props = defineProps({
                         <Logo />
                     </div>
                     <div className="text-sm text-gray-600">
-                        <img src="img/logo_Web.png" class="h-8 mr-3" alt=" Logo" />
-                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-dark">Dosen AI</span>
+                        <img src="img/logo.png" class="object-cover w-auto h-20 mr-3" alt=" Logo" />
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-dark ms-4">Dosen AI</span>
                     </div>
                 </div>
                 <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
@@ -341,5 +341,6 @@ const props = defineProps({
                 <div className="text-sm text-gray-600 mr-4">&copy; Amikom. All rights reserved.</div>
             </div>
         </div>
-</footer></template>
+    </footer>
+</template>
 <style></style>
