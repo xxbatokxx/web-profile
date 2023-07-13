@@ -60,8 +60,8 @@ const props = defineProps({
             </a>
             <div class="flex md:order-2">
                 <div v-if="canLogin">
-                    <button v-if="$page.props.auth.user" :href="route('dashboard')"
-                        class="px-4 py-2 mr-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Dashboard</button>
+                    <a v-if="$page.props.auth.user" :href="route('dashboard')"
+                        class="px-4 py-2 mr-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Dashboard</a>
                     <template v-else>
                         <Link :href="route('login')" type="button"
                             class="px-4 py-2 mr-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -191,7 +191,8 @@ const props = defineProps({
                     </div>
                     <div className="text-sm text-gray-600">
                         <img src="img/logo.png" class="object-cover w-auto h-20 mr-3" alt=" Logo" />
-                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-dark ms-4">Dosen AI</span>
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-dark ms-4">Dosen
+                            AI</span>
                     </div>
                 </div>
                 <div className="sm:col-span-6 md:col-span-3 lg:col-span-2">
